@@ -45,6 +45,8 @@ app.use(cors({
             "https://www.ad-syria-ai.com",
             "https://adsyria.ai",
             "https://www.adsyria.ai",
+            "https://adsyriaai.com",
+            "https://www.adsyriaai.com",
             "https://marketing-agency-production.up.railway.app"
         ];
 
