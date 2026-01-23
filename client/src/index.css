@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Accessibility: Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 2px;
+}
+
+
+.hero-gradient {
+    background: radial-gradient(circle at top left, #e0f2fe 0%, #ffffff 50%);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+}
+
+/* Comparison Slider */
+.comparison-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.image-before,
+.image-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-after {
+    border-left: 4px solid #fff;
+    box-shadow: -10px 0 30px rgba(56, 189, 248, 0.2);
+    z-index: 2;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: white;
+    cursor: ew-resize;
+    z-index: 3;
+    transform: translateX(-50%);
+}
+
+.handle-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Range Input for Slider */
+.slider-range-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 5;
+}
+
+.beam-effect {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
+    z-index: 4;
+    pointer-events: none;
+}
+
+.dialect-card {
+    transition: all 0.3s ease;
+}
+
+.dialect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
